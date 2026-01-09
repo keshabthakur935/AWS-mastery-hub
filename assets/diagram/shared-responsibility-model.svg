@@ -1,0 +1,26 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">AWS Shared Responsibility Model Diagram Placeholder</text>
+
+    <!-- AWS Responsibility -->
+    <rect x="50" y="250" width="700" height="100" fill="#232F3E" rx="5" ry="5"/>
+    <text x="400" y="270" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">AWS Responsibility: "Security OF the Cloud"</text>
+    <text x="400" y="300" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Compute, Storage, Database, Networking, Regions, AZs, Edge Locations</text>
+    <text x="400" y="320" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Global Infrastructure, Physical Security, Hardware, Software, Network</text>
+
+    <!-- Customer Responsibility -->
+    <rect x="50" y="50" width="700" height="150" fill="#FF9900" rx="5" ry="5"/>
+    <text x="400" y="70" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Customer Responsibility: "Security IN the Cloud"</text>
+    <text x="400" y="100" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Customer Data, Platform, Applications, Operating System, Network Configuration</text>
+    <text x="400" y="120" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Firewall Configuration, Client-side Data Encryption, Server-side Encryption</text>
+    <text x="400" y="140" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Network Traffic Protection, IAM (Identity and Access Management)</text>
+    <text x="400" y="160" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Security Group Configuration, Patch Management</text>
+
+    <!-- Arrow -->
+    <line x1="400" y1="200" x2="400" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

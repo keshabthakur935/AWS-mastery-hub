@@ -1,0 +1,44 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">AWS Security Groups and Network ACLs Diagram Placeholder</text>
+
+    <!-- VPC -->
+    <rect x="50" y="50" width="700" height="300" fill="#E0FFFF" stroke="#232F3E" stroke-width="2" rx="10" ry="10"/>
+    <text x="400" y="75" font-family="Arial, sans-serif" font-size="18" fill="#232F3E" text-anchor="middle">Amazon VPC</text>
+
+    <!-- Subnet -->
+    <rect x="100" y="100" width="600" height="200" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="400" y="125" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Subnet (e.g., 10.0.1.0/24)</text>
+
+    <!-- Network ACL -->
+    <rect x="80" y="90" width="640" height="220" fill="none" stroke="#FF9900" stroke-dasharray="5,5" stroke-width="2" rx="8" ry="8"/>
+    <text x="100" y="110" font-family="Arial, sans-serif" font-size="12" fill="#FF9900">Network ACL (Stateless Firewall for Subnet)</text>
+
+    <!-- EC2 Instance 1 -->
+    <rect x="150" y="150" width="150" height="100" fill="#90EE90" rx="5" ry="5"/>
+    <text x="225" y="170" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">EC2 Instance 1</text>
+    <text x="225" y="190" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Web Server</text>
+
+    <!-- Security Group 1 -->
+    <rect x="140" y="140" width="170" height="120" fill="none" stroke="#232F3E" stroke-width="2" rx="8" ry="8"/>
+    <text x="160" y="155" font-family="Arial, sans-serif" font-size="12" fill="#232F3E">Security Group 1 (Stateful Firewall for Instance)</text>
+
+    <!-- EC2 Instance 2 -->
+    <rect x="500" y="150" width="150" height="100" fill="#90EE90" rx="5" ry="5"/>
+    <text x="575" y="170" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">EC2 Instance 2</text>
+    <text x="575" y="190" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Database Server</text>
+
+    <!-- Security Group 2 -->
+    <rect x="490" y="140" width="170" height="120" fill="none" stroke="#232F3E" stroke-width="2" rx="8" ry="8"/>
+    <text x="510" y="155" font-family="Arial, sans-serif" font-size="12" fill="#232F3E">Security Group 2</text>
+
+    <!-- Arrows indicating traffic flow -->
+    <line x1="400" y1="50" x2="400" y2="90" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="400" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Internet Traffic</text>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

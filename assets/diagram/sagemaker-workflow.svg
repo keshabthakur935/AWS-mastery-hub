@@ -1,0 +1,36 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">SageMaker Workflow Diagram Placeholder</text>
+
+    <!-- Data Prep -->
+    <rect x="50" y="150" width="100" height="80" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="100" y="190" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Data Prep</text>
+
+    <!-- Build Model -->
+    <rect x="200" y="150" width="100" height="80" fill="#FF9900" rx="5" ry="5"/>
+    <text x="250" y="190" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Build Model</text>
+
+    <!-- Train Model -->
+    <rect x="350" y="150" width="100" height="80" fill="#90EE90" rx="5" ry="5"/>
+    <text x="400" y="190" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Train Model</text>
+
+    <!-- Deploy Model -->
+    <rect x="500" y="150" width="100" height="80" fill="#232F3E" rx="5" ry="5"/>
+    <text x="550" y="190" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Deploy Model</text>
+
+    <!-- Inference -->
+    <rect x="650" y="150" width="100" height="80" fill="#FFB6C1" rx="5" ry="5"/>
+    <text x="700" y="190" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Inference</text>
+
+    <!-- Arrows -->
+    <line x1="150" y1="190" x2="200" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="300" y1="190" x2="350" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="450" y1="190" x2="500" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="600" y1="190" x2="650" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

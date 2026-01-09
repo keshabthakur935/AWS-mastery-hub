@@ -1,0 +1,38 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">Cloud Service Models: IaaS, PaaS, SaaS</text>
+
+    <!-- Base Layer: Networking, Storage, Servers, Virtualization -->
+    <rect x="50" y="300" width="700" height="50" fill="#232F3E" rx="5" ry="5"/>
+    <text x="400" y="325" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Networking, Storage, Servers, Virtualization (Managed by Vendor)</text>
+
+    <!-- IaaS -->
+    <rect x="50" y="200" width="200" height="90" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="150" y="215" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">IaaS</text>
+    <text x="150" y="235" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">You Manage:</text>
+    <text x="150" y="250" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Applications, Data, Runtime, OS</text>
+
+    <!-- PaaS -->
+    <rect x="300" y="200" width="200" height="90" fill="#90EE90" rx="5" ry="5"/>
+    <text x="400" y="215" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">PaaS</text>
+    <text x="400" y="235" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">You Manage:</text>
+    <text x="400" y="250" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Applications, Data</text>
+
+    <!-- SaaS -->
+    <rect x="550" y="200" width="200" height="90" fill="#FFB6C1" rx="5" ry="5"/>
+    <text x="650" y="215" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">SaaS</text>
+    <text x="650" y="235" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">You Manage:</text>
+    <text x="650" y="250" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Nothing (just use)</text>
+
+    <!-- Arrows indicating what is managed by whom -->
+    <text x="150" y="180" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Managed by You</text>
+    <text x="400" y="180" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Managed by You</text>
+    <text x="650" y="180" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Managed by You</text>
+
+    <line x1="150" y1="195" x2="150" y2="200" stroke="#666" stroke-width="1"/>
+    <line x1="400" y1="195" x2="400" y2="200" stroke="#666" stroke-width="1"/>
+    <line x1="650" y1="195" x2="650" y2="200" stroke="#666" stroke-width="1"/>
+
+    <text x="400" y="365" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Managed by Vendor</text>
+    <line x1="400" y1="290" x2="400" y2="300" stroke="#666" stroke-width="1"/>
+</svg>

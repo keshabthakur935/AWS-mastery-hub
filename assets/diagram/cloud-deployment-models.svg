@@ -1,0 +1,38 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="300" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">Cloud Deployment Models Diagram Placeholder</text>
+
+    <!-- Public Cloud -->
+    <rect x="50" y="80" width="200" height="150" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="150" y="100" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Public Cloud</text>
+    <text x="150" y="130" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Shared Infrastructure</text>
+    <text x="150" y="145" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Pay-as-you-go</text>
+    <text x="150" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">High Scalability</text>
+    <text x="150" y="175" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Managed by Provider</text>
+
+    <!-- Private Cloud -->
+    <rect x="300" y="80" width="200" height="150" fill="#90EE90" rx="5" ry="5"/>
+    <text x="400" y="100" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Private Cloud</text>
+    <text x="400" y="130" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Dedicated Resources</text>
+    <text x="400" y="145" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Higher Control</text>
+    <text x="400" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Enhanced Security</text>
+    <text x="400" y="175" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Higher Cost</text>
+
+    <!-- Hybrid Cloud -->
+    <rect x="550" y="80" width="200" height="150" fill="#FFB6C1" rx="5" ry="5"/>
+    <text x="650" y="100" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Hybrid Cloud</text>
+    <text x="650" y="130" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Mix of Public & Private</text>
+    <text x="650" y="145" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Flexibility</text>
+    <text x="650" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Data Portability</text>
+    <text x="650" y="175" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Cost Optimization</text>
+
+    <!-- Arrows connecting Hybrid to Public and Private -->
+    <line x1="550" y1="155" x2="500" y2="155" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="550" y1="155" x2="250" y2="155" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

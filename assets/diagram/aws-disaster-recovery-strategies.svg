@@ -1,0 +1,54 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="500" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">AWS Disaster Recovery Strategies Diagram Placeholder</text>
+
+    <!-- On-Premises -->
+    <rect x="50" y="80" width="150" height="50" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="125" y="105" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">On-Premises</text>
+
+    <!-- Backup & Restore -->
+    <rect x="250" y="50" width="150" height="80" fill="#FFB6C1" rx="5" ry="5"/>
+    <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">Backup & Restore</text>
+    <text x="325" y="95" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">High RTO/RPO</text>
+    <text x="325" y="110" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Low Cost</text>
+
+    <!-- Pilot Light -->
+    <rect x="250" y="150" width="150" height="80" fill="#FFD700" rx="5" ry="5"/>
+    <text x="325" y="175" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">Pilot Light</text>
+    <text x="325" y="195" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Medium RTO/RPO</text>
+    <text x="325" y="210" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Medium Cost</text>
+
+    <!-- Warm Standby -->
+    <rect x="250" y="250" width="150" height="80" fill="#90EE90" rx="5" ry="5"/>
+    <text x="325" y="275" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">Warm Standby</text>
+    <text x="325" y="295" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Lower RTO/RPO</text>
+    <text x="325" y="310" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Higher Cost</text>
+
+    <!-- Multi-Site Active/Active -->
+    <rect x="250" y="350" width="150" height="80" fill="#FFA07A" rx="5" ry="5"/>
+    <text x="325" y="375" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">Multi-Site</text>
+    <text x="325" y="395" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Lowest RTO/RPO</text>
+    <text x="325" y="410" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Highest Cost</text>
+
+    <!-- AWS Cloud -->
+    <rect x="500" y="200" width="250" height="100" fill="#232F3E" rx="5" ry="5"/>
+    <text x="625" y="250" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">AWS Cloud (DR Region)</text>
+
+    <!-- Arrows from On-Prem to DR Strategies -->
+    <line x1="200" y1="105" x2="250" y2="90" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="105" x2="250" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="105" x2="250" y2="290" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="105" x2="250" y2="390" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Arrows from DR Strategies to AWS Cloud -->
+    <line x1="400" y1="90" x2="500" y2="220" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="400" y1="190" x2="500" y2="240" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="400" y1="290" x2="500" y2="260" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="400" y1="390" x2="500" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

@@ -1,0 +1,41 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">EFS Shared Access Diagram Placeholder</text>
+
+    <!-- EFS File System -->
+    <rect x="300" y="150" width="200" height="100" fill="#FF9900" rx="10" ry="10"/>
+    <text x="400" y="180" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Amazon EFS</text>
+    <text x="400" y="205" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">File System</text>
+
+    <!-- EC2 Instance 1 -->
+    <rect x="50" y="100" width="150" height="80" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="125" y="130" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">EC2 Instance 1</text>
+    <text x="125" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">(Web Server)</text>
+
+    <!-- EC2 Instance 2 -->
+    <rect x="50" y="220" width="150" height="80" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="125" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">EC2 Instance 2</text>
+    <text x="125" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">(App Server)</text>
+
+    <!-- EC2 Instance 3 -->
+    <rect x="600" y="100" width="150" height="80" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="675" y="130" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">EC2 Instance 3</text>
+    <text x="675" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">(Dev Environment)</text>
+
+    <!-- EC2 Instance 4 -->
+    <rect x="600" y="220" width="150" height="80" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="675" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">EC2 Instance 4</text>
+    <text x="675" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">(Analytics)</text>
+
+    <!-- Connections -->
+    <line x1="200" y1="140" x2="300" y2="170" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="260" x2="300" y2="230" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="500" y1="170" x2="600" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="500" y1="230" x2="600" y2="260" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

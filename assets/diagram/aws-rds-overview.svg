@@ -1,0 +1,37 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">AWS RDS Overview Diagram Placeholder</text>
+
+    <!-- Application -->
+    <rect x="100" y="100" width="150" height="80" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="175" y="140" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Application</text>
+
+    <!-- RDS -->
+    <rect x="300" y="100" width="200" height="150" fill="#FF9900" rx="10" ry="10"/>
+    <text x="400" y="130" font-family="Arial, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">Amazon RDS</text>
+    <text x="400" y="160" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Managed Database</text>
+
+    <!-- Database Instances -->
+    <rect x="320" y="190" width="70" height="40" fill="#FFD700" rx="3" ry="3"/>
+    <text x="355" y="215" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Primary DB</text>
+
+    <rect x="410" y="190" width="70" height="40" fill="#FFD700" rx="3" ry="3"/>
+    <text x="445" y="215" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Replica DB</text>
+
+    <!-- Multi-AZ -->
+    <rect x="550" y="100" width="150" height="150" fill="#90EE90" rx="10" ry="10"/>
+    <text x="625" y="130" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Multi-AZ</text>
+    <text x="625" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Automatic Failover</text>
+    <rect x="570" y="190" width="50" height="40" fill="#ADD8E6" rx="3" ry="3"/>
+    <text x="595" y="215" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Standby</text>
+
+    <!-- Arrows -->
+    <line x1="250" y1="140" x2="300" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="500" y1="175" x2="550" y2="175" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

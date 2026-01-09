@@ -1,0 +1,38 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">S3 Overview Diagram Placeholder</text>
+
+    <!-- User -->
+    <circle cx="100" cy="100" r="30" fill="#ADD8E6"/>
+    <text x="100" y="100" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">User</text>
+
+    <!-- Application -->
+    <rect x="200" y="80" width="150" height="80" fill="#90EE90" rx="5" ry="5"/>
+    <text x="275" y="110" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">Application</text>
+    <text x="275" y="130" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">(EC2, Lambda, etc.)</text>
+
+    <!-- S3 Bucket -->
+    <rect x="450" y="100" width="250" height="150" fill="#FF9900" rx="10" ry="10"/>
+    <text x="575" y="130" font-family="Arial, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">Amazon S3</text>
+    <text x="575" y="160" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Bucket Name</text>
+
+    <!-- Objects inside S3 -->
+    <rect x="470" y="190" width="50" height="40" fill="#FFD700" rx="3" ry="3"/>
+    <text x="495" y="215" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Object 1</text>
+
+    <rect x="540" y="190" width="50" height="40" fill="#FFD700" rx="3" ry="3"/>
+    <text x="565" y="215" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Object 2</text>
+
+    <rect x="610" y="190" width="50" height="40" fill="#FFD700" rx="3" ry="3"/>
+    <text x="635" y="215" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Object 3</text>
+
+    <!-- Arrows -->
+    <line x1="130" y1="100" x2="200" y2="120" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="350" y1="120" x2="450" y2="175" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

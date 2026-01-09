@@ -1,0 +1,38 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">AWS Edge Locations Diagram Placeholder</text>
+
+    <!-- User 1 -->
+    <circle cx="100" cy="100" r="30" fill="#ADD8E6"/>
+    <text x="100" y="100" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">User 1</text>
+
+    <!-- User 2 -->
+    <circle cx="700" cy="100" r="30" fill="#ADD8E6"/>
+    <text x="700" y="100" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">User 2</text>
+
+    <!-- Edge Location 1 -->
+    <rect x="200" y="150" width="100" height="50" fill="#FF9900" rx="5" ry="5"/>
+    <text x="250" y="175" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Edge Loc 1</text>
+
+    <!-- Edge Location 2 -->
+    <rect x="500" y="150" width="100" height="50" fill="#FF9900" rx="5" ry="5"/>
+    <text x="550" y="175" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Edge Loc 2</text>
+
+    <!-- AWS Region -->
+    <rect x="300" y="250" width="200" height="100" fill="#232F3E" rx="10" ry="10"/>
+    <text x="400" y="280" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">AWS Region</text>
+    <text x="400" y="300" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Origin Server</text>
+
+    <!-- Connections -->
+    <line x1="100" y1="100" x2="200" y2="175" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="700" y1="100" x2="600" y2="175" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <line x1="250" y1="200" x2="400" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="550" y1="200" x2="400" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>

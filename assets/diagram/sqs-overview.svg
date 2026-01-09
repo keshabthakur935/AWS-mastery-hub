@@ -1,0 +1,29 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="800" height="400" fill="#F8F8F8"/>
+    <text x="50%" y="20" font-family="Arial, sans-serif" font-size="20" fill="#333" text-anchor="middle">SQS Overview Diagram Placeholder</text>
+
+    <!-- Producer -->
+    <rect x="50" y="150" width="150" height="80" fill="#ADD8E6" rx="5" ry="5"/>
+    <text x="125" y="190" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">Producer</text>
+
+    <!-- SQS Queue -->
+    <rect x="300" y="150" width="200" height="80" fill="#FF9900" rx="10" ry="10"/>
+    <text x="400" y="190" font-family="Arial, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">SQS Queue</text>
+
+    <!-- Consumer -->
+    <rect x="600" y="150" width="150" height="80" fill="#232F3E" rx="5" ry="5"/>
+    <text x="675" y="190" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Consumer</text>
+
+    <!-- Arrows -->
+    <line x1="200" y1="190" x2="300" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="250" y="175" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Sends Message</text>
+
+    <line x1="500" y1="190" x2="600" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="550" y="175" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Receives Message</text>
+
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+        </marker>
+    </defs>
+</svg>
