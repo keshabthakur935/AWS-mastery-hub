@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - AWS Master Course</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Theme toggle functionality
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save theme preference to local storage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Apply saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AWS Master Course</div>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="interview-prep.html">Interview Prep</a></li>
+                <li><a href="final-projects.html">Final Projects</a></li>
+                <li><a href="career-paths.html">Career Paths</a></li>
+                <li class="dropdown">
+                    <a href="#">Modules</a>
+                    <ul class="dropdown-content">
+                        <!-- Module links will be dynamically generated here -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>Frequently Asked Questions</h1>
+        <section class="faq-item">
+            <h3 class="faq-question">Q: What are the prerequisites for this course?</h3>
+            <div class="faq-answer">
+                <p>A: This course is designed for beginners and advanced learners alike. No prior AWS experience is required, but a basic understanding of IT concepts is beneficial.</p>
+            </div>
+        </section>
+        <section class="faq-item">
+            <h3 class="faq-question">Q: Will this course help me pass AWS certifications?</h3>
+            <div class="faq-answer">
+                <p>A: Yes, the course content is aligned with various AWS certifications, and we provide dedicated sections for exam preparation and practice questions.</p>
+            </div>
+        </section>
+        <section class="faq-item">
+            <h3 class="faq-question">Q: Is there a community forum for students?</h3>
+            <div class="faq-answer">
+                <p>A: We are working on setting up a community forum where students can interact, ask questions, and share their knowledge.</p>
+            </div>
+        </section>
+        <section class="faq-item">
+            <h3 class="faq-question">Q: How long will I have access to the course?</h3>
+            <div class="faq-answer">
+                <p>A: You will have lifetime access to the course content, including all future updates.</p>
+            </div>
+        </section>
+        <section class="faq-item">
+            <h3 class="faq-question">Q: Can I get a refund if I'm not satisfied?</h3>
+            <div class="faq-answer">
+                <p>A: Yes, we offer a 30-day money-back guarantee. If you are not satisfied with the course for any reason, you can request a full refund within 30 days of purchase.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AWS Master Course</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/faq.js"></script>
+</body>
+</html>

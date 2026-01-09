@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AWS Master Course</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Theme toggle functionality
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save theme preference to local storage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Apply saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AWS Master Course</div>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="interview-prep.html">Interview Prep</a></li>
+                <li><a href="final-projects.html">Final Projects</a></li>
+                <li><a href="career-paths.html">Career Paths</a></li>
+                <li class="dropdown">
+                    <a href="#">Modules</a>
+                    <ul class="dropdown-content">
+                        <!-- Module links will be dynamically generated here -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>About AWS Master Course</h1>
+        <p>This course is designed to take you from zero to advanced in AWS Cloud computing. We cover real-world scenarios, certification preparation, and interview questions to ensure you are fully equipped for a successful career in the cloud.</p>
+
+        <section id="mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide the most comprehensive, practical, and up-to-date AWS training available. We believe in learning by doing, and our course is packed with hands-on labs and real-world projects to help you master the AWS platform.</p>
+        </section>
+
+        <section id="instructors">
+            <h2>Meet the Instructors</h2>
+            <p>Our instructors are seasoned cloud professionals with years of experience working with AWS. They are passionate about sharing their knowledge and helping students succeed.</p>
+            <!-- Instructor profiles can be added here -->
+        </section>
+
+        <section id="philosophy">
+            <h2>Our Teaching Philosophy</h2>
+            <p>We believe that the best way to learn is by solving real-world problems. Our course is structured around a series of hands-on projects that will challenge you to apply what you have learned in a practical context. We also provide a supportive learning community where you can get help from instructors and fellow students.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AWS Master Course</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

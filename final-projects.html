@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Projects - AWS Master Course</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Theme toggle functionality
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save theme preference to local storage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Apply saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AWS Master Course</div>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="interview-prep.html">Interview Prep</a></li>
+                <li><a href="final-projects.html">Final Projects</a></li>
+                <li><a href="career-paths.html">Career Paths</a></li>
+                <li class="dropdown">
+                    <a href="#">Modules</a>
+                    <ul class="dropdown-content">
+                        <!-- Module links will be dynamically generated here -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="final-projects-container">
+            <h1>AWS Master Course Final Projects</h1>
+            <p>Apply your knowledge with these hands-on final projects. Each project provides a detailed guide to help you build real-world solutions on AWS.</p>
+
+            <div class="project-card-grid">
+                <div class="project-card">
+                    <h3>3-Tier Web Application</h3>
+                    <p>Deploy a highly available and scalable web application using EC2, RDS, ALB, and Auto Scaling Groups.</p>
+                    <a href="final-projects/3-tier-web-app.html">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Serverless Application</h3>
+                    <p>Build a fully serverless application using AWS Lambda, S3, and API Gateway for event-driven processing.</p>
+                    <a href="final-projects/serverless-app.html">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>CI/CD Pipeline</h3>
+                    <p>Set up a Continuous Integration/Continuous Delivery pipeline with CodePipeline, CodeBuild, and GitHub.</p>
+                    <a href="final-projects/cicd-pipeline.html">View Project</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AWS Master Course</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

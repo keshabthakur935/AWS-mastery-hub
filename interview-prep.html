@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Prep - AWS Master Course</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Theme toggle functionality
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save theme preference to local storage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Apply saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AWS Master Course</div>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="interview-prep.html" class="active">Interview Prep</a></li>
+                <li><a href="final-projects.html">Final Projects</a></li>
+                <li><a href="career-paths.html">Career Paths</a></li>
+                <li class="dropdown">
+                    <a href="#">Modules</a>
+                    <ul class="dropdown-content">
+                        <!-- Module links will be dynamically generated here -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="interview-prep-container">
+            <h1>AWS Interview Preparation</h1>
+            <p>Prepare for your AWS technical interviews with our curated list of questions and answers, categorized by module. We also include general HR and technical questions relevant to an AWS Engineer role.</p>
+
+            <h2>Module-Specific Questions</h2>
+            <ul class="module-list" id="interview-module-list">
+                <!-- Module interview links will be dynamically generated here by script.js -->
+            </ul>
+
+            <h2>General HR Questions for AWS Engineers</h2>
+            <div class="question-answer">
+                <h3>Tell me about yourself.</h3>
+                <p><strong>Answer:</strong> Start with a brief overview of your professional background, highlighting relevant experience and skills. Connect your experience to the AWS domain and the role you're applying for. Conclude with your career aspirations and how this role aligns with them.</p>
+            </div>
+            <div class="question-answer">
+                <h3>Why are you interested in working with AWS/cloud technologies?</h3>
+                <p><strong>Answer:</strong> Express genuine interest in cloud computing and AWS. Talk about the scalability, innovation, and impact of cloud technologies. Mention any personal projects or learning experiences with AWS.</p>
+            </div>
+            <div class="question-answer">
+                <h3>What are your strengths and weaknesses?</h3>
+                <p><strong>Answer:</strong> For strengths, focus on skills relevant to an AWS role (e.g., problem-solving, quick learner, collaboration, technical proficiency). For weaknesses, choose a genuine area for improvement and explain what steps you're taking to address it, demonstrating self-awareness and a growth mindset.</p>
+            </div>
+            <div class="question-answer">
+                <h3>Describe a challenging project you worked on. How did you overcome obstacles?</h3>
+                <p><strong>Answer:</strong> Use the STAR method (Situation, Task, Action, Result). Describe an AWS-related project, the challenges faced (e.g., technical hurdles, tight deadlines), the actions you took, and the positive outcome. Emphasize problem-solving skills and teamwork.</p>
+            </div>
+            <div class="question-answer">
+                <h3>Where do you see yourself in 5 years?</h3>
+                <p><strong>Answer:</strong> Align your long-term goals with the company's mission and the growth trajectory of AWS. Express a desire to deepen your AWS expertise, take on more responsibility, and contribute significantly to innovative cloud solutions.</p>
+            </div>
+
+            <h2>General Technical Questions for AWS Engineers</h2>
+            <div class="question-answer">
+                <h3>Explain the Shared Responsibility Model.</h3>
+                <p><strong>Answer:</strong> AWS is responsible for security OF the Cloud (infrastructure, hardware, software, facilities). The customer is responsible for security IN the Cloud (data, applications, OS, network configuration, IAM). Provide examples for each.</p>
+            </div>
+            <div class="question-answer">
+                <h3>What is the difference between a Region and an Availability Zone?</h3>
+                <p><strong>Answer:</strong> A Region is a geographical area with multiple, isolated locations. An Availability Zone (AZ) is one or more discrete data centers within a Region, designed for fault tolerance. Deploying across multiple AZs provides high availability.</p>
+            </div>
+            <div class="question-answer">
+                <h3>How would you ensure high availability for an application on AWS?</h3>
+                <p><strong>Answer:</strong> Discuss using multiple Availability Zones, Elastic Load Balancers (ELB), Auto Scaling Groups (ASG), and Multi-AZ deployments for databases (RDS). Mention disaster recovery strategies like RTO/RPO.</p>
+            </div>
+            <div class="question-answer">
+                <h3>Describe a scenario where you would use AWS Lambda.</h3>
+                <p><strong>Answer:</strong> Explain Lambda's serverless, event-driven nature. Provide examples like processing S3 events (image resizing), backend for web/mobile APIs (API Gateway + Lambda), or scheduled tasks (CloudWatch Events).</p>
+            </div>
+            <div class="question-answer">
+                <h3>What are some common security best practices on AWS?</h3>
+                <p><strong>Answer:</strong> Mention the principle of least privilege (IAM), enabling MFA, encrypting data at rest and in transit, using Security Groups and Network ACLs, regularly auditing with CloudTrail, and using services like GuardDuty and WAF.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AWS Master Course</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

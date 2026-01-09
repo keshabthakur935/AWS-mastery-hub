@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary - AWS Master Course</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Theme toggle functionality
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save theme preference to local storage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Apply saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AWS Master Course</div>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossary.html" class="active">Glossary</a></li>
+                <li><a href="interview-prep.html">Interview Prep</a></li>
+                <li><a href="final-projects.html">Final Projects</a></li>
+                <li><a href="career-paths.html">Career Paths</a></li>
+                <li class="dropdown">
+                    <a href="#">Modules</a>
+                    <ul class="dropdown-content">
+                        <!-- Module links will be dynamically generated here -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>Cloud Computing Glossary</h1>
+        <input type="text" id="glossary-search" placeholder="Search for a term...">
+        <dl>
+            <dt>AWS (Amazon Web Services)</dt>
+            <dd>A comprehensive, broadly adopted, and elastic cloud platform offered by Amazon.</dd>
+
+            <dt>EC2 (Elastic Compute Cloud)</dt>
+            <dd>A web service that provides resizable compute capacity in the cloud.</dd>
+
+            <dt>S3 (Simple Storage Service)</dt>
+            <dd>Object storage built to store and retrieve any amount of data from anywhere on the web.</dd>
+
+            <dt>VPC (Virtual Private Cloud)</dt>
+            <dd>A virtual network dedicated to your AWS account, logically isolated from other virtual networks in the AWS Cloud.</dd>
+
+            <dt>IAM (Identity and Access Management)</dt>
+            <dd>A web service that helps you securely control access to AWS resources.</dd>
+
+            <dt>Region</dt>
+            <dd>A physical location in the world where AWS has multiple Availability Zones.</dd>
+
+            <dt>Availability Zone (AZ)</dt>
+            <dd>One or more discrete data centers with redundant power, networking, and connectivity in an AWS Region.</dd>
+
+            <dt>Edge Location</dt>
+            <dd>Sites that Amazon CloudFront uses to cache copies of your content closer to your customers.</dd>
+
+            <dt>Shared Responsibility Model</dt>
+            <dd>Defines what AWS is responsible for (security *of* the cloud) and what the customer is responsible for (security *in* the cloud).</dd>
+
+            <dt>IaaS (Infrastructure as a Service)</dt>
+            <dd>Cloud computing model that provides virtualized computing resources over the internet.</dd>
+
+            <dt>PaaS (Platform as a Service)</dt>
+            <dd>Cloud computing model that provides a platform allowing customers to develop, run, and manage applications without the complexity of building and maintaining the infrastructure.</dd>
+
+            <dt>Partition Key</dt>
+            <dd>Part of a table's primary key, used to partition data across different storage nodes for scalability.</dd>
+
+            <dt>SaaS (Software as a Service)</dt>
+            <dd>Cloud computing model that provides software applications over the internet, on demand and typically on a subscription basis.</dd>
+
+            <dt>On-Premises</dt>
+            <dd>Software and technology that is installed and operates from a company's local server and computing infrastructure.</dd>
+
+            <dt>Hybrid Cloud</dt>
+            <dd>A cloud computing environment that uses a mix of on-premises, private cloud and public cloud services with orchestration between the platforms.</dd>
+
+            <dt>Public Cloud</dt>
+            <dd>Cloud services offered over the public internet and available to anyone who wants to purchase them.</dd>
+
+            <dt>Private Cloud</dt>
+            <dd>Cloud services offered either over the internet or a private internal network and only to select users instead of the general public.</dd>
+
+            <dt>Elasticity</dt>
+            <dd>The ability to acquire computing resources as you need them and release resources when you no longer need them.</dd>
+
+            <dt>Scalability</dt>
+            <dd>The ability of a system to handle a growing amount of work by adding resources to the system.</dd>
+
+            <dt>Fault Tolerance</dt>
+            <dd>The ability of a system to continue operating without interruption when one or more of its components fail.</dd>
+
+            <dt>Function</dt>
+            <dd>A script or program that runs in AWS Lambda.</dd>
+
+            <dt>High Availability</dt>
+            <dd>A characteristic of a system that aims to ensure an agreed level of operational performance, usually uptime, for a higher than normal period.</dd>
+
+            <dt>Load Balancer</dt>
+            <dd>Distributes incoming network traffic across a group of backend servers or resources.</dd>
+
+            <dt>Auto Scaling</dt>
+            <dd>Automatically adjusts the number of compute resources in your application in response to demand.</dd>
+
+            <dt>DNS (Domain Name System)</dt>
+            <dd>A hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network.</dd>
+
+            <dt>CDN (Content Delivery Network)</dt>
+            <dd>A geographically distributed network of proxy servers and their data centers.</dd>
+
+            <dt>Database</dt>
+            <dd>An organized collection of structured information, or data, typically stored electronically in a computer system.</dd>
+
+            <dt>Dashboards</dt>
+            <dd>In CloudWatch, customizable home pages in the CloudWatch console that you can use to monitor your resources in a single view.</dd>
+
+            <dt>Serverless</dt>
+            <dd>A cloud-native development model that allows developers to build and run applications without having to manage servers.</dd>
+
+            <dt>Container</dt>
+            <dd>A standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.</dd>
+
+            <dt>DevOps</dt>
+            <dd>A set of practices that combines software development (Dev) and IT operations (Ops) to shorten the systems development life cycle and provide continuous delivery with high software quality.</dd>
+
+            <dt>Infrastructure as Code (IaC)</dt>
+            <dd>Managing and provisioning computer data centers through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools.</dd>
+
+            <dt>Monitoring</dt>
+            <dd>The act of observing and checking the behavior or output of a system or process.</dd>
+
+            <dt>Logging</dt>
+            <dd>The process of recording events that occur in a computer system or network.</dd>
+
+            <dt>Metrics</dt>
+            <dd>Quantifiable measures used to track and assess the status of a specific business process.</dd>
+
+            <dt>Alerting</dt>
+            <dd>A system that notifies users or other systems when a specific event or condition occurs.</dd>
+
+            <dt>Alarms</dt>
+            <dd>In CloudWatch, an alarm watches a single metric over a time period you specify, and performs one or more actions based on the value of the metric relative to a threshold over a number of time periods.</dd>
+
+            <dt>Encryption</dt>
+            <dd>The process of converting information or data into a code, especially to prevent unauthorized access.</dd>
+
+            <dt>Compliance</dt>
+            <dd>Adhering to a set of rules, standards, or laws.</dd>
+
+            <dt>Security Group</dt>
+            <dd>Acts as a virtual firewall for your EC2 instances to control inbound and outbound traffic.</dd>
+
+            <dt>Network ACL (Access Control List)</dt>
+            <dd>An optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets.</dd>
+
+            <dt>VPN (Virtual Private Network)</dt>
+            <dd>Extends a private network across a public network and enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network.</dd>
+
+            <dt>Direct Connect</dt>
+            <dd>A cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS.</dd>
+
+            <dt>Route Table</dt>
+            <dd>Contains a set of rules, called routes, that are used to determine where network traffic is directed.</dd>
+
+            <dt>Rule</dt>
+            <dd>In AWS WAF, a condition that AWS WAF searches for in web requests. You can create your own rules or use managed rules.</dd>
+
+            <dt>Subnet</dt>
+            <dd>A logical subdivision of an IP network.</dd>
+
+            <dt>CIDR (Classless Inter-Domain Routing)</dt>
+            <dd>A method for allocating IP addresses and for IP routing.</dd>
+
+            <dt>NAT Gateway (Network Address Translation Gateway)</dt>
+            <dd>Enables instances in a private subnet to connect to the internet or other AWS services, but prevents the internet from initiating a connection with those instances.</dd>
+
+            <dt>Bastion Host</dt>
+            <dd>A server whose purpose is to provide access to a private network from an external network, such as the Internet.</dd>
+
+            <dt>Peering Connection</dt>
+            <dd>A networking connection between two VPCs that enables you to route traffic between them privately.</dd>
+
+            <dt>CloudFront</dt>
+            <dd>A fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.</dd>
+
+            <dt>Global Accelerator</dt>
+            <dd>A networking service that improves the availability and performance of your applications with local or global users.</dd>
+
+            <dt>CloudFormation</dt>
+            <dd>A service that helps you model and set up your Amazon Web Services resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS.</dd>
+
+            <dt>Elastic Beanstalk</dt>
+            <dd>An easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.</dd>
+
+            <dt>CodePipeline</dt>
+            <dd>A continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.</dd>
+
+            <dt>CodeDeploy</dt>
+            <dd>A service that automates code deployments to any instance, including Amazon EC2 instances and instances running on-premises.</dd>
+
+            <dt>FSx</dt>
+            <dd>Provides fully managed third-party file systems with the native compatibility and feature sets for your workloads.</dd>
+
+            <dt>Storage Gateway</dt>
+            <dd>A hybrid cloud storage service that enables your on-premises applications to seamlessly use AWS cloud storage.</dd>
+
+            <dt>DataSync</dt>
+            <dd>A data transfer service that makes it easy for you to automate moving data between on-premises storage and Amazon S3, Amazon EFS, or Amazon FSx for Windows File Server.</dd>
+
+            <dt>CloudWatch</dt>
+            <dd>A monitoring and observability service that provides you with data and actionable insights to monitor your applications, respond to system-wide performance changes, and optimize resource utilization.</dd>
+
+            <dt>CloudTrail</dt>
+            <dd>Enables governance, compliance, operational auditing, and risk auditing of your AWS account. CloudTrail records activity in your AWS account and delivers log files to an Amazon S3 bucket.</dd>
+
+            <dt>EventBridge</dt>
+            <dd>A serverless event bus that makes it easier to connect applications together using data from your own applications, integrated SaaS applications, and AWS services.</dd>
+
+            <dt>X-Ray</dt>
+            <dd>Helps developers analyze and debug distributed applications, such as those built using microservices architecture.</dd>
+
+            <dt>SQS (Simple Queue Service)</dt>
+            <dd>A fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.</dd>
+
+            <dt>SNS (Simple Notification Service)</dt>
+            <dd>A highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications.</dd>
+
+            <dt>Kinesis</dt>
+            <dd>A streaming data service that makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information.</dd>
+
+            <dt>MQ (Message Queue)</dt>
+            <dd>A managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate message brokers in the cloud.</dd>
+
+            <dt>Rekognition</dt>
+            <dd>A service that makes it easy to add image and video analysis to your applications.</dd>
+
+            <dt>Polly</dt>
+            <dd>A service that turns text into lifelike speech, allowing you to create applications that talk.</dd>
+
+            <dt>Lex</dt>
+            <dd>A service for building conversational interfaces into any application using voice and text.</dd>
+
+            <dt>Translate</dt>
+            <dd>A neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation.</dd>
+
+            <dt>SageMaker</dt>
+            <dd>A fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning (ML) models quickly.</dd>
+
+            <dt>WAF (Web Application Firewall)</dt>
+            <dd>Helps protect your web applications or APIs from common web exploits that may affect availability, compromise security, or consume excessive resources.</dd>
+
+            <dt>Shield</dt>
+            <dd>A managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS.</dd>
+
+            <dt>KMS (Key Management Service)</dt>
+            <dd>Makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications.</dd>
+
+            <dt>GuardDuty</dt>
+            <dd>A threat detection service that continuously monitors your AWS accounts and workloads for malicious activity and unauthorized behavior.</dd>
+
+            <dt>Macie</dt>
+            <dd>A data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS.</dd>
+
+            <dt>Inspector</dt>
+            <dd>An automated security assessment service that helps improve the security and compliance of applications deployed on AWS.</dd>
+
+            <dt>Secrets Manager</dt>
+            <dd>Helps you protect access to your applications, services, and IT resources by enabling you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle.</dd>
+                    <dt>API Gateway</dt>
+            <dd>A fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.</dd>
+
+            <dt>Application Load Balancer (ALB)</dt>
+            <dd>An Elastic Load Balancing option that operates at the application layer (Layer 7) and allows for advanced request routing.</dd>
+
+            <dt>Auto Scaling Group (ASG)</dt>
+            <dd>A collection of EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management.</dd>
+
+            <dt>Amazon Machine Image (AMI)</dt>
+            <dd>A template that contains a software configuration (operating system, application server, and applications) to launch an EC2 instance.</dd>
+
+            <dt>Amazon Aurora</dt>
+            <dd>A MySQL and PostgreSQL-compatible relational database built for the cloud, combining the performance and availability of traditional enterprise databases with the simplicity and cost-effectiveness of open-source databases.</dd>
+
+            <dt>Amazon Athena</dt>
+            <dd>An interactive query service that makes it easy to analyze data directly in Amazon S3 using standard SQL.</dd>
+
+            <dt>Amazon DynamoDB</dt>
+            <dd>A fast and flexible NoSQL database service for all applications that need consistent, single-digit-millisecond latency at any scale.</dd>
+
+            <dt>Amazon EFS (Elastic File System)</dt>
+            <dd>Provides simple, scalable, elastic file storage for use with AWS Cloud services and on-premises resources.</dd>
+
+            <dt>Amazon EKS (Elastic Kubernetes Service)</dt>
+            <dd>A fully managed Kubernetes service that makes it easy to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane.</dd>
+
+            <dt>Amazon ElastiCache</dt>
+            <dd>A fully managed in-memory caching service that supports two open-source in-memory engines: Redis and Memcached.</dd>
+
+            <dt>Amazon EMR (Elastic MapReduce)</dt>
+            <dd>A managed cluster platform that simplifies running big data frameworks, such as Apache Hadoop and Apache Spark, on AWS.</dd>
+
+            <dt>Amazon EventBridge</dt>
+            <dd>A serverless event bus that makes it easier to connect applications together using data from your own applications, integrated SaaS applications, and AWS services.</dd>
+
+            <dt>Amazon FSx</dt>
+            <dd>Provides fully managed third-party file systems with the native compatibility and feature sets for your workloads.</dd>
+
+            <dt>Amazon GuardDuty</dt>
+            <dd>A threat detection service that continuously monitors your AWS accounts and workloads for malicious activity and unauthorized behavior.</dd>
+
+            <dt>Amazon Inspector</dt>
+            <dd>An automated security assessment service that helps improve the security and compliance of applications deployed on AWS.</dd>
+
+            <dt>Amazon Kinesis</dt>
+            <dd>A streaming data service that makes it easy to collect, process, and analyze real-time, streaming data.</dd>
+
+            <dt>Amazon Lex</dt>
+            <dd>A service for building conversational interfaces into any application using voice and text.</dd>
+
+            <dt>Amazon Macie</dt>
+            <dd>A data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS.</dd>
+
+            <dt>Amazon MQ</dt>
+            <dd>A managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate message brokers in the cloud.</dd>
+
+            <dt>Amazon RDS (Relational Database Service)</dt>
+            <dd>Makes it easy to set up, operate, and scale a relational database in the cloud.</dd>
+
+            <dt>Amazon Redshift</dt>
+            <dd>A fully managed, petabyte-scale data warehouse service in the cloud.</dd>
+
+            <dt>Amazon Rekognition</dt>
+            <dd>A service that makes it easy to add image and video analysis to your applications.</dd>
+
+            <dt>Amazon Route 53</dt>
+            <dd>A highly available and scalable cloud Domain Name System (DNS) web service.</dd>
+
+            <dt>Amazon SageMaker</dt>
+            <dd>A fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning (ML) models quickly.</dd>
+
+            <dt>Amazon SQS (Simple Queue Service)</dt>
+            <dd>A fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.</dd>
+
+            <dt>Amazon SNS (Simple Notification Service)</dt>
+            <dd>A highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications.</dd>
+
+            <dt>Amazon Translate</dt>
+            <dd>A neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation.</dd>
+
+            <dt>AWS Batch</dt>
+            <dd>Enables developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs on AWS.</dd>
+
+            <dt>AWS Certificate Manager (ACM)</dt>
+            <dd>Manages, deploys, and renews SSL/TLS certificates for your AWS-based websites and applications.</dd>
+
+            <dt>AWS Cloud Development Kit (CDK)</dt>
+            <dd>An open-source software development framework to define your cloud application resources using familiar programming languages.</dd>
+
+            <dt>AWS CloudFormation</dt>
+            <dd>A service that helps you model and set up your Amazon Web Services resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS.</dd>
+
+            <dt>AWS CloudShell</dt>
+            <dd>A browser-based shell that makes it easy to securely manage, explore, and interact with your AWS resources.</dd>
+
+            <dt>AWS CodeBuild</dt>
+            <dd>A fully managed continuous integration service that compiles source code, runs tests, and produces software packages that are ready to deploy.</dd>
+
+            <dt>AWS CodeCommit</dt>
+            <dd>A fully managed source control service that hosts secure Git-based repositories.</dd>
+
+            <dt>AWS CodeDeploy</dt>
+            <dd>A service that automates code deployments to any instance, including Amazon EC2 instances and instances running on-premises.</dd>
+
+            <dt>AWS CodePipeline</dt>
+            <dd>A continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.</dd>
+
+            <dt>AWS Cognito</dt>
+            <dd>Adds user sign-up, sign-in, and access control to your web and mobile apps quickly and easily.</dd>
+
+            <dt>AWS Config</dt>
+            <dd>Enables you to assess, audit, and evaluate the configurations of your AWS resources.</dd>
+
+            <dt>AWS DataSync</dt>
+            <dd>A data transfer service that makes it easy for you to automate moving data between on-premises storage and Amazon S3, Amazon EFS, or Amazon FSx for Windows File Server.</dd>
+
+            <dt>AWS Direct Connect</dt>
+            <dd>A cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS.</dd>
+
+            <dt>AWS Elastic Beanstalk</dt>
+            <dd>An easy-to-use service for deploying and scaling web applications and services.</dd>
+
+            <dt>AWS Fargate</dt>
+            <dd>A serverless compute engine for containers that works with both Amazon ECS and Amazon EKS.</dd>
+
+            <dt>AWS Global Accelerator</dt>
+            <dd>A networking service that improves the availability and performance of your applications with local or global users.</dd>
+
+            <dt>AWS Glue</dt>
+            <dd>A fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.</dd>
+
+            <dt>AWS Lambda</dt>
+            <dd>A serverless, event-driven compute service that lets you run code without provisioning or managing servers.</dd>
+
+            <dt>AWS Organizations</dt>
+            <dd>Helps you centrally manage and govern your environment as you grow and scale your AWS resources.</dd>
+
+            <dt>AWS Outposts</dt>
+            <dd>Brings native AWS services, infrastructure, and operating models to virtually any datacenter, co-location space, or on-premises facility.</dd>
+
+            <dt>AWS Secrets Manager</dt>
+            <dd>Helps you protect access to your applications, services, and IT resources by enabling you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle.</dd>
+
+            <dt>AWS Shield</dt>
+            <dd>A managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS.</dd>
+
+            <dt>AWS Snowball</dt>
+            <dd>A petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data into and out of AWS.</dd>
+
+            <dt>AWS Snowcone</dt>
+            <dd>The smallest member of the AWS Snow Family, designed for edge computing, data migration, and content distribution.</dd>
+
+            <dt>AWS Snowmobile</dt>
+            <dd>An exabyte-scale data transfer service used to move extremely large amounts of data (up to 100 petabytes per Snowmobile) to AWS.</dd>
+
+            <dt>AWS Storage Gateway</dt>
+            <dd>A hybrid cloud storage service that enables your on-premises applications to seamlessly use AWS cloud storage.</dd>
+
+            <dt>AWS Systems Manager</dt>
+            <dd>Gives you visibility and control of your infrastructure on AWS.</dd>
+
+            <dt>AWS WAF (Web Application Firewall)</dt>
+            <dd>Helps protect your web applications or APIs from common web exploits that may affect availability, compromise security, or consume excessive resources.</dd>
+
+            <dt>AWS X-Ray</dt>
+            <dd>Helps developers analyze and debug distributed applications, such as those built using microservices architecture.</dd>
+
+            <dt>Bastion Host</dt>
+            <dd>A server whose purpose is to provide access to a private network from an external network, such as the Internet.</dd>
+
+            <dt>Block Storage</dt>
+            <dd>A method of storing data in fixed-size blocks, often used for databases and file systems (e.g., EBS).</dd>
+
+            <dt>Cloud Computing</dt>
+            <dd>The on-demand delivery of IT resources over the Internet with pay-as-you-go pricing.</dd>
+
+            <dt>CloudFront</dt>
+            <dd>A fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.</dd>
+
+            <dt>CloudWatch</dt>
+            <dd>A monitoring and observability service that provides you with data and actionable insights to monitor your applications, respond to system-wide performance changes, and optimize resource utilization.</dd>
+
+            <dt>CloudTrail</dt>
+            <dd>Enables governance, compliance, operational auditing, and risk auditing of your AWS account. CloudTrail records activity in your AWS account and delivers log files to an Amazon S3 bucket.</dd>
+
+            <dt>Container</dt>
+            <dd>A standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.</dd>
+
+            <dt>Continuous Delivery (CD)</dt>
+            <dd>A software engineering approach where teams produce software in short cycles, ensuring that the software can be reliably released at any time.</dd>
+
+            <dt>Continuous Integration (CI)</dt>
+            <dd>The practice of merging all developers' working copies to a shared mainline several times a day.</dd>
+
+            <dt>Data Lake</dt>
+            <dd>A centralized repository that allows you to store all your structured and unstructured data at any scale.</dd>
+
+            <dt>Data Transfer Out (Egress)</dt>
+            <dd>Data moving out of AWS to the internet or another AWS Region, typically incurring charges.</dd>
+
+            <dt>Dedicated Host</dt>
+            <dd>A physical EC2 server dedicated for your use, providing visibility into the underlying sockets and physical cores.</dd>
+
+            <dt>DevOps</dt>
+            <dd>A set of practices that combines software development (Dev) and IT operations (Ops) to shorten the systems development life cycle and provide continuous delivery with high software quality.</dd>
+
+            <dt>DNS (Domain Name System)</dt>
+            <dd>A hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network.</dd>
+
+            <dt>Durability</dt>
+            <dd>The ability of a system to recover from failures and continue to function.</dd>
+
+            <dt>Elastic IP (EIP)</dt>
+            <dd>A static, public IPv4 address designed for dynamic cloud computing, which you can allocate to your AWS account and associate with an EC2 instance.</dd>
+
+            <dt>Elastic Load Balancer (ELB)</dt>
+            <dd>Automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, IP addresses, and Lambda functions.</dd>
+
+            <dt>Encryption at Rest</dt>
+            <dd>Data is encrypted when it is stored (e.g., on a hard drive, in an S3 bucket).</dd>
+
+            <dt>Encryption in Transit</dt>
+            <dd>Data is encrypted while it is moving between networks or systems.</dd>
+
+            <dt>Fault Tolerance</dt>
+            <dd>The ability of a system to continue operating without interruption when one or more of its components fail.</dd>
+
+            <dt>File Storage</dt>
+            <dd>A method of storing data as a hierarchy of files and folders, typically accessed via network file system protocols (e.g., EFS, FSx).</dd>
+
+            <dt>Firewall</dt>
+            <dd>A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</dd>
+
+            <dt>Gateway Load Balancer (GLB)</dt>
+            <dd>A type of Elastic Load Balancer that makes it easy to deploy, scale, and manage virtual appliances such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems.</dd>
+
+            <dt>Geographic Redundancy</dt>
+            <dd>Storing data or deploying applications in multiple geographically separate locations to protect against regional disasters.</dd>
+
+            <dt>High Availability</dt>
+            <dd>A characteristic of a system that aims to ensure an agreed level of operational performance, usually uptime, for a higher than normal period.</dd>
+
+            <dt>Hybrid Cloud</dt>
+            <dd>A cloud computing environment that uses a mix of on-premises, private cloud and public cloud services with orchestration between the platforms.</dd>
+
+            <dt>Hypervisor</dt>
+            <dd>A piece of software, firmware, or hardware that creates and runs virtual machines (VMs).</dd>
+
+            <dt>Identity Provider (IdP)</dt>
+            <dd>A system that creates, maintains, and manages identity information for principals and provides authentication services to applications.</dd>
+
+            <dt>Instance Store</dt>
+            <dd>Temporary block-level storage for your EC2 instance, physically attached to the host computer. Data is lost when the instance stops or terminates.</dd>
+
+            <dt>Internet Gateway (IGW)</dt>
+            <dd>A horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the internet.</dd>
+
+            <dt>Key Pair</dt>
+            <dd>Consists of a public key and a private key, used to securely connect to Linux EC2 instances using SSH.</dd>
+
+            <dt>Kubernetes</dt>
+            <dd>An open-source system for automating deployment, scaling, and management of containerized applications.</dd>
+
+            <dt>Load Balancer</dt>
+            <dd>Distributes incoming network traffic across a group of backend servers or resources.</dd>
+
+            <dt>Managed Service</dt>
+            <dd>A service where the cloud provider is responsible for the operational aspects of the service, such as patching, backups, and scaling.</dd>
+
+            <dt>Microservices</dt>
+            <dd>An architectural style that structures an application as a collection of loosely coupled services.</dd>
+
+            <dt>Multi-AZ Deployment</dt>
+            <dd>Deploying resources across multiple Availability Zones to achieve high availability and fault tolerance.</dd>
+
+            <dt>Multi-Factor Authentication (MFA)</dt>
+            <dd>An extra layer of security that requires more than just a password to sign in.</dd>
+
+            <dt>NAT Gateway (Network Address Translation Gateway)</dt>
+            <dd>Enables instances in a private subnet to connect to the internet or other AWS services, but prevents the internet from initiating a connection with those instances.</dd>
+
+            <dt>Network ACL (Access Control List)</dt>
+            <dd>An optional layer of security for your VPC that acts as a stateless firewall for controlling traffic in and out of one or more subnets.</dd>
+
+            <dt>Network Load Balancer (NLB)</dt>
+            <dd>An Elastic Load Balancing option that operates at the connection level (Layer 4) and is designed for extreme performance and static IP addresses.</dd>
+
+            <dt>NoSQL Database</dt>
+            <dd>A database that provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases (e.g., DynamoDB).</dd>
+
+            <dt>Object Storage</dt>
+            <dd>A method of storing data as discrete units (objects) within buckets, accessed via APIs (e.g., S3).</dd>
+
+            <dt>On-Premises</dt>
+            <dd>Software and technology that is installed and operates from a company's local server and computing infrastructure.</dd>
+
+            <dt>Open-Source Software</dt>
+            <dd>Software with source code that anyone can inspect, modify, and enhance.</dd>
+
+            <dt>OSI Model</dt>
+            <dd>A conceptual framework that describes functions of a networking or telecommunication system in terms of seven layers.</dd>
+
+            <dt>Pay-as-you-go</dt>
+            <dd>A cloud pricing model where you only pay for the services you consume, with no upfront costs.</dd>
+
+            <dt>Peering Connection</dt>
+            <dd>A networking connection between two VPCs that enables you to route traffic between them privately.</dd>
+
+            <dt>Principle of Least Privilege</dt>
+            <dd>A security best practice that dictates granting only the minimum permissions necessary to perform a task.</dd>
+
+            <dt>Private Cloud</dt>
+            <dd>Cloud services offered either over the internet or a private internal network and only to select users instead of the general public.</dd>
+
+            <dt>Public Cloud</dt>
+            <dd>Cloud services offered over the public internet and available to anyone who wants to purchase them.</dd>
+
+            <dt>Recovery Point Objective (RPO)</dt>
+            <dd>The maximum acceptable amount of data loss measured in time.</dd>
+
+            <dt>Recovery Time Objective (RTO)</dt>
+            <dd>The maximum acceptable amount of time that can pass after a disaster before an application or system must be restored to an operational state.</dd>
+
+            <dt>Relational Database</dt>
+            <dd>A database that stores and provides access to data points that are related to one another (e.g., RDS, Aurora).</dd>
+
+            <dt>Reserved Instances (RIs)</dt>
+            <dd>An EC2 pricing model where you commit to a specific instance type and Region for a 1-year or 3-year term for significant discounts.</dd>
+
+            <dt>Resource-based Policy</dt>
+            <dd>An IAM policy attached to a resource (e.g., S3 bucket policy) that specifies who can access the resource and what actions they can perform.</dd>
+
+            <dt>Route Table</dt>
+            <dd>Contains a set of rules, called routes, that are used to determine where network traffic is directed within a VPC.</dd>
+
+            <dt>Savings Plans</dt>
+            <dd>A flexible pricing model offering lower prices on EC2, Fargate, and Lambda usage in exchange for a commitment to a consistent amount of usage for a 1-year or 3-year term.</dd>
+
+            <dt>Scalability</dt>
+            <dd>The ability of a system to handle a growing amount of work by adding resources to the system.</dd>
+
+            <dt>Security Group</dt>
+            <dd>Acts as a virtual firewall for your EC2 instances to control inbound and outbound traffic.</dd>
+
+            <dt>Serverless Computing</dt>
+            <dd>A cloud-native development model that allows developers to build and run applications without having to manage servers (e.g., AWS Lambda, Fargate).</dd>
+
+            <dt>Shared Responsibility Model</dt>
+            <dd>Defines what AWS is responsible for (security *of* the cloud) and what the customer is responsible for (security *in* the cloud).</dd>
+
+            <dt>Spot Instances</dt>
+            <dd>An EC2 pricing model that allows you to request unused EC2 capacity at steep discounts, but instances can be interrupted by AWS.</dd>
+
+            <dt>Subnet</dt>
+            <dd>A logical subdivision of an IP network within a VPC.</dd>
+
+            <dt>Virtual Private Cloud (VPC)</dt>
+            <dd>A virtual network dedicated to your AWS account, logically isolated from other virtual networks in the AWS Cloud.</dd>
+
+            <dt>Virtual Private Network (VPN)</dt>
+            <dd>Extends a private network across a public network and enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network.</dd>
+
+            <dt>Virtualization</dt>
+            <dd>The creation of a virtual (rather than actual) version of something, such as a server, desktop, storage device, network, or even an operating system.</dd>
+
+            <dt>VPC Flow Logs</dt>
+            <dd>A feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC.</dd>
+
+            <dt>Web Application Firewall (WAF)</dt>
+            <dd>Helps protect your web applications or APIs from common web exploits that may affect availability, compromise security, or consume excessive resources.</dd>
+
+            <dt>Workload</dt>
+            <dd>The amount of processing that a computer or system is performing at a given time.</dd>
+
+            <dt>Access Control List (ACL)</dt>
+            <dd>A list of permissions attached to an object, specifying which users or system processes are granted access to objects, and what operations are allowed on given objects.</dd>
+
+            <dt>Amazon CloudFront</dt>
+            <dd>A fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds.</dd>
+
+            <dt>Amazon Elastic Block Store (EBS)</dt>
+            <dd>Provides persistent block storage volumes for use with Amazon EC2 instances.</dd>
+
+            <dt>Amazon Polly</dt>
+            <dd>A service that turns text into lifelike speech, allowing you to create applications that talk.</dd>
+
+            <dt>Amazon S3 Glacier</dt>
+            <dd>A secure, durable, and extremely low-cost storage service for data archiving and long-term backup.</dd>
+
+            <dt>Amazon S3 Standard-IA</dt>
+            <dd>An Amazon S3 storage class for data that is accessed less frequently, but requires rapid access when needed.</dd>
+
+            <dt>Amazon S3 One Zone-IA</dt>
+            <dd>An Amazon S3 storage class for data that is accessed less frequently, but requires rapid access when needed, and is stored in a single Availability Zone.</dd>
+
+            <dt>Amazon S3 Intelligent-Tiering</dt>
+            <dd>An Amazon S3 storage class that automatically moves data to the most cost-effective access tier when access patterns change.</dd>
+
+            <dt>Amazon S3 Outposts</dt>
+            <dd>Delivers object storage to your on-premises AWS Outposts environment.</dd>
+
+            <dt>Amazon S3 Transfer Acceleration</dt>
+            <dd>Enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket.</dd>
+
+            <dt>Amazon VPC Endpoint</dt>
+            <dd>Enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.</dd>
+
+            <dt>Application Programming Interface (API)</dt>
+            <dd>A set of defined rules that enable different applications to communicate with each other.</dd>
+
+            <dt>Artifact</dt>
+            <dd>A deployable component of your application, such as a JAR file, WAR file, or a ZIP file.</dd>
+
+            <dt>Availability</dt>
+            <dd>The percentage of time that a system or resource is operational and accessible.</dd>
+
+            <dt>Backup and Restore</dt>
+            <dd>A disaster recovery strategy involving backing up data and restoring it in a new location after a disaster.</dd>
+
+            <dt>Bandwidth</dt>
+            <dd>The maximum rate of data transfer across a given path.</dd>
+
+            <dt>Block Device Mapping</dt>
+            <dd>Defines the block devices (EBS volumes or instance store volumes) to attach to an EC2 instance when it's launched.</dd>
+
+            <dt>Blue/Green Deployment</dt>
+            <dd>A deployment strategy that involves running two identical production environments, "Blue" and "Green," to minimize downtime and risk.</dd>
+
+            <dt>Bootstrapping</dt>
+            <dd>The process of automatically configuring a newly launched EC2 instance using user data scripts.</dd>
+
+            <dt>Burstable Performance Instances</dt>
+            <dd>EC2 instance types (e.g., T2, T3) that provide a baseline level of CPU performance with the ability to burst to higher levels when needed.</dd>
+
+            <dt>Cache Hit</dt>
+            <dd>Occurs when requested data is found in the cache.</dd>
+
+            <dt>Cache Miss</dt>
+            <dd>Occurs when requested data is not found in the cache and must be retrieved from the primary data source.</dd>
+
+            <dt>Canonical Name (CNAME) Record</dt>
+            <dd>A type of DNS record that maps an alias domain name to another canonical domain name.</dd>
+
+            <dt>Central Processing Unit (CPU)</dt>
+            <dd>The electronic circuitry within a computer that carries out the instructions of a computer program.</dd>
+
+            <dt>Client-Side Encryption</dt>
+            <dd>Encrypting data before sending it to AWS storage services.</dd>
+
+            <dt>CloudFormation Stack</dt>
+            <dd>A collection of AWS resources that you can manage as a single unit in CloudFormation.</dd>
+
+            <dt>CloudFront Distribution</dt>
+            <dd>The configuration that tells CloudFront where to get your content (origin server) and how to deliver it (behaviors, cache settings).</dd>
+
+            <dt>CloudWatch Logs</dt>
+            <dd>A service to centralize and monitor logs from various AWS resources and applications.</dd>
+
+            <dt>CodeCommit</dt>
+            <dd>A fully managed source control service that hosts secure Git-based repositories.</dd>
+
+            <dt>CodeBuild</dt>
+            <dd>A fully managed continuous integration service that compiles source code, runs tests, and produces software packages.</dd>
+
+            <dt>Cold Storage</dt>
+            <dd>Storage for data that is rarely accessed and can tolerate longer retrieval times, typically at a very low cost (e.g., S3 Glacier).</dd>
+
+            <dt>Compliance</dt>
+            <dd>Adhering to a set of rules, standards, or laws.</dd>
+
+            <dt>Content Delivery Network (CDN)</dt>
+            <dd>A geographically distributed network of proxy servers and their data centers that provides high availability and performance by distributing content closer to users.</dd>
+
+            <dt>Customer Gateway</dt>
+            <dd>A physical device or software application on your side of a Site-to-Site VPN connection.</dd>
+
+            <dt>Data Governance</dt>
+            <dd>The overall management of the availability, usability, integrity, and security of data used in an enterprise.</dd>
+
+            <dt>Data Migration</dt>
+            <dd>The process of moving data from one storage system or location to another.</dd>
+
+            <dt>Data Plane</dt>
+            <dd>The part of a network that carries user traffic.</dd>
+
+            <dt>Data Transfer In (Ingress)</dt>
+            <dd>Data moving into AWS from the internet or another AWS Region, typically free of charge.</dd>
+
+            <dt>Database Migration Service (DMS)</dt>
+            <dd>Helps you migrate databases to AWS quickly and securely.</dd>
+
+            <dt>Decoupling</dt>
+            <dd>Designing system components so that they can operate independently, reducing dependencies and improving resilience.</dd>
+
+            <dt>Deployment Model</dt>
+            <dd>Refers to the specific type of cloud environment, such as public, private, or hybrid cloud.</dd>
+
+            <dt>Desired Capacity</dt>
+            <dd>The number of EC2 instances that an Auto Scaling group should maintain.</dd>
+
+            <dt>Distributed Denial of Service (DDoS)</dt>
+            <dd>A malicious attempt to disrupt normal traffic of a targeted server, service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.</dd>
+
+            <dt>Domain Name</dt>
+            <dd>A human-readable name that identifies a website or other resource on the internet (e.g., example.com).</dd>
+
+            <dt>Dynamic Content</dt>
+            <dd>Web content that changes based on user interaction, time, or other variables, often generated by server-side scripts.</dd>
+
+            <dt>Elastic IP (EIP)</dt>
+            <dd>A static, public IPv4 address that you can allocate to your AWS account and associate with an EC2 instance.</dd>
+
+            <dt>Endpoint</dt>
+            <dd>A URL that is the entry point for a web service or API.</dd>
+
+            <dt>Event-Driven Architecture</dt>
+            <dd>A software architecture pattern where decoupled services communicate by producing and consuming events.</dd>
+
+            <dt>Failover</dt>
+            <dd>The process of automatically switching to a redundant or standby system upon the failure or abnormal termination of the previously active system.</dd>
+
+            <dt>File System</dt>
+            <dd>A method and data structure that an operating system uses to control how data is stored and retrieved.</dd>
+
+            <dt>Firewall Manager</dt>
+            <dd>A security management service that allows you to centrally configure and manage firewall rules across your accounts and applications in AWS Organizations.</dd>
+
+            <dt>Geoproximity Routing</dt>
+            <dd>A Route 53 routing policy that routes traffic based on the geographic location of your users and your resources, with optional bias settings.</dd>
+
+            <dt>Global Infrastructure</dt>
+            <dd>The worldwide network of AWS Regions, Availability Zones, and Edge Locations.</dd>
+
+            <dt>Hardware Security Module (HSM)</dt>
+            <dd>A physical computing device that safeguards and manages digital keys for strong authentication and provides cryptoprocessing.</dd>
+
+            <dt>Health Check</dt>
+            <dd>A mechanism to monitor the availability and performance of resources, often used by Load Balancers and Route 53.</dd>
+
+            <dt>High-Performance Computing (HPC)</dt>
+            <dd>The use of supercomputers and computer clusters to solve advanced computation problems.</dd>
+
+            <dt>Hosted Zone</dt>
+            <dd>A container for records in Amazon Route 53 that defines how you want to route traffic for a domain and its subdomains.</dd>
+
+            <dt>Identity and Access Management (IAM)</dt>
+            <dd>A web service that helps you securely control access to AWS resources.</dd>
+
+            <dt>Identity-based Policy</dt>
+            <dd>An IAM policy attached to an IAM user, group, or role that defines their permissions.</dd>
+
+            <dt>In-memory Data Store</dt>
+            <dd>A database that primarily relies on main memory for data storage, resulting in very fast response times (e.g., ElastiCache).</dd>
+
+            <dt>Instance Type</dt>
+            <dd>Defines the virtual hardware for an EC2 instance, including CPU, memory, storage, and networking capacity.</dd>
+
+            <dt>Internet Protocol (IP) Address</dt>
+            <dd>A numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.</dd>
+
+            <dt>Key Management Service (KMS)</dt>
+            <dd>Makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications.</dd>
+
+            <dt>Latency</dt>
+            <dd>The time delay between a cause and effect in a system, often referring to network delay.</dd>
+
+            <dt>Load Balancing</dt>
+            <dd>The process of distributing network traffic across multiple servers to improve application responsiveness and availability.</dd>
+
+            <dt>Log Group</dt>
+            <dd>A group of log streams that share the same retention, monitoring, and access control settings in CloudWatch Logs.</dd>
+
+            <dt>Log Stream</dt>
+            <dd>A sequence of log events from a single source in CloudWatch Logs.</dd>
+
+            <dt>Machine Learning (ML)</dt>
+            <dd>A type of artificial intelligence that allows software applications to become more accurate in predicting outcomes without being explicitly programmed.</dd>
+
+            <dt>Managed Policy</dt>
+            <dd>An IAM policy that is created and managed by AWS (AWS managed policy) or by you (customer managed policy).</dd>
+
+            <dt>Managed Rule Group</dt>
+            <dd>In AWS WAF, a pre-configured set of rules managed by AWS or AWS Marketplace sellers to protect against common threats.</dd>
+
+            <dt>Massively Parallel Processing (MPP)</dt>
+            <dd>A type of computing that uses many processors to perform a set of coordinated computations in parallel.</dd>
+
+            <dt>Metadata</dt>
+            <dd>Data that provides information about other data.</dd>
+
+            <dt>Metric</dt>
+            <dd>A variable that is measured and used to track the performance or health of a system.</dd>
+
+            <dt>Microservices Architecture</dt>
+            <dd>An architectural style that structures an application as a collection of loosely coupled, independently deployable services.</dd>
+
+            <dt>NAT Instance</dt>
+            <dd>An EC2 instance configured to perform Network Address Translation, allowing instances in a private subnet to access the internet.</dd>
+
+            <dt>Network Interface</dt>
+            <dd>A component that connects a computer to a computer network.</dd>
+
+            <dt>Object Key</dt>
+            <dd>The unique identifier for an object within an S3 bucket.</dd>
+
+            <dt>Origin Server</dt>
+            <dd>The source of content that a CDN (like CloudFront) retrieves and caches.</dd>
+
+            <dt>Parameter Store</dt>
+            <dd>A capability of AWS Systems Manager that provides secure, hierarchical storage for configuration data management and secrets management.</dd>
+
+            <dt>Persistent Storage</dt>
+            <dd>Storage that retains data even after the device is powered off (e.g., EBS, S3).</dd>
+
+            <dt>Pilot Light</dt>
+            <dd>A disaster recovery strategy where a minimal version of the environment is always running in the DR region, ready to be scaled up.</dd>
+
+            <dt>Pre-Signed URL</dt>
+            <dd>A URL that grants temporary access to a specific S3 object without requiring AWS credentials.</dd>
+
+            <dt>Private IP Address</dt>
+            <dd>An IP address used within a private network, not routable over the internet.</dd>
+
+            <dt>Public IP Address</dt>
+            <dd>An IP address that is routable over the internet.</dd>
+
+            <dt>Pub/Sub (Publish/Subscribe)</dt>
+            <dd>A messaging pattern where senders (publishers) send messages to a topic, and receivers (subscribers) receive messages from the topic.</dd>
+
+            <dt>Queue</dt>
+            <dd>A temporary storage location for messages, used to decouple senders and receivers in a distributed system.</dd>
+
+            <dt>Read Replica</dt>
+            <dd>A copy of a database instance that handles read traffic, offloading the primary instance and improving read performance.</dd>
+
+            <dt>Region</dt>
+            <dd>A physical location in the world where AWS has multiple Availability Zones.</dd>
+
+            <dt>Relational Database Service (RDS)</dt>
+            <dd>A managed service that makes it easy to set up, operate, and scale a relational database in the cloud.</dd>
+
+            <dt>Reserved Instance (RI)</dt>
+            <dd>An EC2 pricing model where you commit to a specific instance type and Region for a 1-year or 3-year term for significant discounts.</dd>
+
+            <dt>Root User</dt>
+            <dd>The account owner, created when you first set up your AWS account, with full administrative access.</dd>
+
+            <dt>Route Table</dt>
+            <dd>Contains a set of rules, called routes, that are used to determine where network traffic is directed within a VPC.</dd>
+
+            <dt>Routing Policy</dt>
+            <dd>A configuration in Route 53 that determines how DNS queries are responded to, enabling advanced traffic management.</dd>
+
+            <dt>Scalability</dt>
+            <dd>The ability of a system to handle a growing amount of work by adding resources to the system.</dd>
+
+            <dt>Schema</dt>
+            <dd>The organization or structure of a database.</dd>
+
+            <dt>Secrets Manager</dt>
+            <dd>Helps you protect access to your applications, services, and IT resources by enabling you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle.</dd>
+
+            <dt>Security Token Service (STS)</dt>
+            <dd>A web service that enables you to request temporary, limited-privilege credentials for IAM users or for users that you authenticate (federated users).</dd>
+
+            <dt>Server-Side Encryption (SSE)</dt>
+            <dd>Encrypting data at its destination by the service that receives it (e.g., S3, KMS, customer-provided keys).</dd>
+
+            <dt>Service Control Policies (SCPs)</dt>
+            <dd>A type of policy that you can use to manage permissions in your organization in AWS Organizations.</dd>
+
+            <dt>Service Discovery</dt>
+            <dd>The process of automatically detecting devices and services on a network.</dd>
+
+            <dt>Session Management</dt>
+            <dd>The process of securely handling multiple requests to a web-based application or service from a single user or client.</dd>
+
+            <dt>Simple Routing</dt>
+            <dd>A Route 53 routing policy that routes traffic to a single resource.</dd>
+
+            <dt>Site-to-Site VPN</dt>
+            <dd>A secure connection between your on-premises network and your Amazon VPC over the public internet.</dd>
+
+            <dt>Snapshot</dt>
+            <dd>A point-in-time backup of an EBS volume.</dd>
+
+            <dt>Static Content</dt>
+            <dd>Web content that does not change based on user interaction or other variables, typically HTML, CSS, JavaScript, images.</dd>
+
+            <dt>Static Website Hosting</dt>
+            <dd>Hosting a website with static content directly from an S3 bucket.</dd>
+
+            <dt>Storage Class</dt>
+            <dd>Defines the availability, durability, and cost of data stored in S3 (e.g., Standard, Standard-IA, Glacier).</dd>
+
+            <dt>Streaming Data</dt>
+            <dd>Data that is generated continuously by thousands of data sources, which typically send in the data records simultaneously, and in small sizes (kilobytes).</dd>
+
+            <dt>Subnet Mask</dt>
+            <dd>A 32-bit number that masks an IP address and divides the IP address into a network address and host address.</dd>
+
+            <dt>Target Group</dt>
+            <dd>A logical grouping of targets (e.g., EC2 instances) that an Elastic Load Balancer routes traffic to.</dd>
+
+            <dt>Throughput</dt>
+            <dd>The rate at which data is processed or transferred.</dd>
+
+            <dt>Time To Live (TTL)</dt>
+            <dd>A setting in a DNS record that tells a DNS resolver how long to cache a query before requesting a new update.</dd>
+
+            <dt>Topic</dt>
+            <dd>A logical access point that acts as a communication channel in Amazon SNS.</dd>
+
+            <dt>Traffic Management</dt>
+            <dd>The process of controlling and optimizing the flow of network traffic.</dd>
+
+            <dt>Transit Gateway</dt>
+            <dd>A network transit hub that you can use to interconnect your VPCs and on-premises networks.</dd>
+
+            <dt>Trigger</dt>
+            <dd>An AWS service or application that invokes a Lambda function.</dd>
+
+            <dt>User Data</dt>
+            <dd>A script or set of commands that you can provide when launching an EC2 instance, which runs automatically the first time the instance starts up.</dd>
+
+            <dt>Vendor Lock-in</dt>
+            <dd>A situation where a customer becomes dependent on a vendor for products and services, unable to move to another vendor without substantial costs or effort.</dd>
+
+            <dt>Versioning</dt>
+            <dd>A feature in S3 that allows you to keep multiple versions of an object in the same bucket.</dd>
+
+            <dt>Virtual Private Gateway (VPG)</dt>
+            <dd>The VPN concentrator on the Amazon side of a Site-to-Site VPN connection.</dd>
+
+            <dt>Warm Standby</dt>
+            <dd>A disaster recovery strategy where a fully functional, but scaled-down, version of the environment is always running in the DR region.</dd>
+
+            <dt>Weighted Routing</dt>
+            <dd>A Route 53 routing policy that routes traffic to multiple resources based on a weight you assign to each resource.</dd>
+        </dl>
+    </main>
+    <footer>
+        <p>&copy; 2025 AWS Master Course</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/glossary.js"></script>
+</body>
+</html>

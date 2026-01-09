@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - AWS Master Course</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Theme toggle functionality
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save theme preference to local storage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Apply saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AWS Master Course</div>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="interview-prep.html">Interview Prep</a></li>
+                <li><a href="final-projects.html">Final Projects</a></li>
+                <li><a href="career-paths.html">Career Paths</a></li>
+                <li class="dropdown">
+                    <a href="#">Modules</a>
+                    <ul class="dropdown-content">
+                        <!-- Module links will be dynamically generated here -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="search-results-container">
+            <h1>Search Results for "<span id="search-query-display"></span>"</h1>
+            <div id="results-list">
+                <p>No results found.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AWS Master Course</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/search_index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('query');
+            const searchQueryDisplay = document.getElementById('search-query-display');
+            const resultsList = document.getElementById('results-list');
+
+            if (query) {
+                searchQueryDisplay.textContent = query;
+                resultsList.innerHTML = ''; // Clear "No results found"
+
+                const searchTerm = query.toLowerCase();
+                let resultsFound = false;
+
+                searchIndex.forEach(page => {
+                    const title = page.title.toLowerCase();
+                    const content = page.content_snippet.toLowerCase();
+
+                    if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                        resultsFound = true;
+                        const resultItem = document.createElement('div');
+                        resultItem.classList.add('search-result-item');
+                        resultItem.innerHTML = `
+                            <h3><a href="${page.url}">${page.title}</a></h3>
+                            <p>${page.content_snippet}</p>
+                        `;
+                        resultsList.appendChild(resultItem);
+                    }
+                });
+
+                if (!resultsFound) {
+                    resultsList.innerHTML = '<p>No results found for your query.</p>';
+                }
+            } else {
+                searchQueryDisplay.textContent = '...';
+                resultsList.innerHTML = '<p>Please enter a search term.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
